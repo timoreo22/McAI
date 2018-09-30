@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = "mcia",name = "Minecraft AI",version = "1.0")
+@Mod(modid = "mcia",name = "Minecraft AI",version = "1.0",acceptedMinecraftVersions = "1.12.2")
 public class McIA {
 
     public static Logger logger;
