@@ -1,6 +1,8 @@
 package fr.timoreo.mcia;
 
+import fr.timoreo.mcia.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
@@ -8,6 +10,9 @@ import org.apache.logging.log4j.Logger;
 public class McIA {
 
     public static Logger logger;
+
+    @SidedProxy(clientSide = "fr.timoreo.mcia.proxy.ClientProxy", serverSide = "fr.timoreo.mcia.proxy.ServerProxy")
+    public static CommonProxy proxy;
 
     @Mod.EventHandler
     public static void preinit(FMLPreInitializationEvent e){
