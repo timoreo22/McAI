@@ -46,6 +46,7 @@ dependencies {
     //compile "some.group:artifact:version:classifier"
     //compile "some.group:artifact:version"
     extraLibs group:'org.tensorflow' ,name:'tensorflow', version:'1.11.0'
+    testCompile 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
     configurations.compile.extendsFrom(configurations.extraLibs)
     // real examples
     //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
