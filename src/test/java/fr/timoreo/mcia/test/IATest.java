@@ -7,4 +7,11 @@ public class IATest {
     public static void test() {
 
     }
+
+    public int[] labels;
+    public int[][] images;
+
+    public static void load(){
+
+    }
 }
