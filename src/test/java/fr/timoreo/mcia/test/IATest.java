@@ -24,11 +24,11 @@ public class IATest {
     }
 
     public static void load() {
-        ClassLoader classLoader = IATest.class.getClassLoader();
-        labels = MnistReader.getLabels(classLoader.getResource("train/label/train-labels-idx1-ubyte").getFile());
-        images = MnistReader.getImages(classLoader.getResource("train/images/train-images-idx3-ubyte").getFile());
-        File file = new File(classLoader.getResource("test_img.jpg").getFile());
         try {
+            ClassLoader classLoader = IATest.class.getClassLoader();
+            labels = MnistReader.getLabels(classLoader.getResource("train/label/train-labels-idx1-ubyte").getFile());
+            images = MnistReader.getImages(classLoader.getResource("train/images/train-images-idx3-ubyte").getFile());
+            File file = new File(classLoader.getResource("test_img.jpg").getFile());
             img = ImageIO.read(file);
         } catch (Exception e) {
             e.printStackTrace();
@@ -50,7 +50,7 @@ public class IATest {
         int[] tempArr = new int[WIDTH * HEIGHT];
         for (int i = 0; i < WIDTH; i++) {
             for (int j = 0; j < HEIGHT; j++) {
-                tempArr[0] = 100;
+                tempArr[0] = data[i][j];
                 raster1.setPixel(i, j, tempArr);
             }
         }
